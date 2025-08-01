@@ -35,17 +35,14 @@ This repository contains an analysis of car listing data from HamroBazar, with g
    pip install -r requirements.txt
    ```
 
-##  Data Scraping:
+##  Data Scraping and Analysis :
 ```run data_scrapper.py
     - python data_scrapper.py
     it creates two files that contain raw data extracted from website````
 
-
-##  Data Scraping:
 ```run data_cleaning.ipynb
   - it cleans the raw data and saves the cleaned data into new file ````
 
-## Analysis:
 '''run analysis.ipynb
   it shows different charts and graphs for various condition ```
 
