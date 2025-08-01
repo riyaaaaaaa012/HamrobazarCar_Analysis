@@ -35,16 +35,27 @@ This repository contains an analysis of car listing data from HamroBazar, with g
    pip install -r requirements.txt
    ```
 
-##  Data Scraping and Analysis :
--run data_scrapper.py
--python data_scrapper.py
--it creates two files that contain raw data extracted from website
-    
--run data_cleaning.ipynb
-- it cleans the raw data and saves the cleaned data into new file
+##  Data Scraping and Analysis
 
--run analysis.ipynb
--it shows different charts and graphs for various condition 
+1. **Run `data_scrapper.py`**  
+   ```bash
+   python data_scrapper.py
+   ```
+   - Scrapes car listings from HamroBazar.
+   - Generates two raw data files containing extracted car data.
+
+2. **Run `data_cleaning.ipynb`**  
+   - Cleans the scraped raw data.
+   - Fixes inconsistencies (e.g., condition field), removes noise and duplicates.
+   - Saves the cleaned dataset into a new CSV file.
+
+3. **Run `analysis.ipynb`**  
+   - Performs data exploration and visualization.
+   - Displays charts and graphs showing:
+     - Distribution of car conditions
+     - Price ranges
+     - Listings per brand and more
+
 
 
 
