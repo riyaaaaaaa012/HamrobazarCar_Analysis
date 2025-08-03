@@ -244,7 +244,7 @@ class EnhancedCarScraper:
                 'seller_verified': False
             }
 
-    def scrape_page(self, url, max_cars=300, detailed_seller_info=False):
+    def scrape_page(self, url, max_cars=3000, detailed_seller_info=False):
         print(f" Navigating to: {url}")
         self.driver.get(url)
         time.sleep(5)
@@ -252,7 +252,7 @@ class EnhancedCarScraper:
         seen_ad_ids = set()
 
         scroll_attempts = 0
-        while len(cars) < max_cars and scroll_attempts < 30:
+        while len(cars) < max_cars and scroll_attempts < 300:
             elements = self.driver.find_elements(By.CSS_SELECTOR, '.card-product-linear')
             print(f"Found {len(elements)} car elements on page")
 
@@ -313,8 +313,8 @@ def main():
     print(" Enhanced HamroBazar Car Scraper with Seller Information")
     print("=" * 60)
     
-    max_cars = input("Enter number of cars to scrape (default 10): ").strip()
-    max_cars = int(max_cars) if max_cars.isdigit() else 10
+    max_cars = 500
+   
     
     detailed_info = input("Extract detailed seller info from individual pages? (slower) [y/N]: ").strip().lower()
     detailed_seller_info = detailed_info in ['y', 'yes']
